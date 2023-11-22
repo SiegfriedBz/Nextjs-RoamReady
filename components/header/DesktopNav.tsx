@@ -1,7 +1,12 @@
-import React from 'react'
-
 const DesktopNav = () => {
-  return <div>DesktopNav</div>
+  return (
+    <nav>
+      DesktopNav
+      <ul className='flex gap-x-4'>
+        <li></li>
+      </ul>
+    </nav>
+  )
 }
 
 export default DesktopNav
