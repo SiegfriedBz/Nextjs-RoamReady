@@ -44,10 +44,10 @@ body {
   }
 
   .page {
-    @apply min-h-[calc(100vh-var(--navbar-height)-2rem)]  
-    lg:min-h-[calc(100vh-var(--navbar-height)-4rem)]  
-    xl:min-h-[calc(100vh-var(--navbar-height)-8rem)]  
-    2xl:min-h-[calc(100vh-var(--navbar-height)-12rem)];
+    @apply min-h-[calc(100dvh-var(--navbar-height)-2rem)]  
+    lg:min-h-[calc(100dvh-var(--navbar-height)-4rem)]  
+    xl:min-h-[calc(100dvh-var(--navbar-height)-8rem)]  
+    2xl:min-h-[calc(100dvh-var(--navbar-height)-12rem)];
   }
 
   .section-top {
@@ -55,10 +55,10 @@ body {
   }
 
   .section-full-page {
-    @apply min-h-[calc(100vh-var(--navbar-height)-1rem)]  
-    lg:min-h-[calc(100vh-var(--navbar-height)-2rem)]  
-    xl:min-h-[calc(100vh-var(--navbar-height)-4rem)]  
-    2xl:min-h-[calc(100vh-var(--navbar-height)-6rem)];
+    @apply min-h-[calc(100dvh-var(--navbar-height)-1rem)]  
+    lg:min-h-[calc(100dvh-var(--navbar-height)-2rem)]  
+    xl:min-h-[calc(100dvh-var(--navbar-height)-4rem)]  
+    2xl:min-h-[calc(100dvh-var(--navbar-height)-6rem)];
   }
 
   #header {
@@ -78,7 +78,7 @@ body {
       left-0 right-0 top-[var(--navbar-height)] 
       z-[1000] 
       flex 
-      h-[calc(100vh-var(--navbar-height))] 
+      h-[calc(100dvh-var(--navbar-height))] 
       flex-col
       items-center
       justify-center
