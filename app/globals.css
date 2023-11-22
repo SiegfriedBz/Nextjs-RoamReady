@@ -7,7 +7,7 @@
 }
 
 body {
-  @apply bg-light text-primary-dark;
+  @apply bg-light text-primary-dark dark:text-light dark:bg-gradient-to-tr dark:from-slate-900 dark:to-slate-800;
 }
 
 @layer base {
@@ -52,7 +52,7 @@ body {
     @apply border-primary-light 
       flex 
       h-[var(--navbar-height)] items-center 
-      justify-between border border-b-2 p-4 lg:px-16
+      justify-between border-b p-4 lg:px-16
       lg:py-8 xl:px-32 2xl:px-48;
   }
 
@@ -61,7 +61,7 @@ body {
       flex 
       h-[var(--navbar-height)]
       items-center 
-      justify-between border-t-2 
+      justify-between border-t
       p-4 lg:px-16 lg:py-8 xl:px-32 2xl:px-48;
   }
 
