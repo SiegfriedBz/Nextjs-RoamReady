@@ -27,8 +27,6 @@ const ButtonMobileBurger = ({
         } bg-primary-light 
           before:bg-primary-dark
           after:bg-primary-dark
-          before:dark:bg-light
-          after:dark:bg-light
           rounded transition-all duration-500
 
           before:absolute before:h-[0.15rem] before:w-8

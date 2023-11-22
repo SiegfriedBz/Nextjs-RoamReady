@@ -6,10 +6,11 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        'hero-pattern-bg': "url('/pattern-bg.png')",
+      },
       colors: {
         // stone-50
         light: '#f9fafb',
