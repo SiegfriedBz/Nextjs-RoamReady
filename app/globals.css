@@ -3,7 +3,59 @@
 @tailwind utilities;
 
 :root {
+  --navbar-height: 6rem;
 }
 
 body {
+  @apply bg-light text-primary-dark;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+  h3 {
+    @apply text-lg md:text-xl lg:text-2xl xl:text-3xl;
+  }
+  h4 {
+    @apply text-base md:text-lg lg:text-xl xl:text-2xl;
+  }
+  h5 {
+    @apply text-sm md:text-base lg:text-lg xl:text-xl;
+  }
+  h6 {
+    @apply text-xs md:text-sm lg:text-base xl:text-lg;
+  }
+  p {
+    @apply text-base md:text-lg lg:text-xl xl:text-2xl;
+  }
+}
+
+@layer components {
+  #main {
+    @apply p-4 lg:px-16 lg:py-8 xl:px-32 xl:py-16 2xl:px-48 2xl:py-24;
+  }
+
+  .page {
+    @apply flex min-h-[calc(100vh-var(--navbar-height)-2rem)] flex-col items-center
+    justify-between  
+    lg:min-h-[calc(100vh-var(--navbar-height)-4rem)]  
+    xl:min-h-[calc(100vh-var(--navbar-height)-8rem)]  
+    2xl:min-h-[calc(100vh-var(--navbar-height)-12rem)];
+  }
+
+  #header {
+    @apply flex h-[var(--navbar-height)] items-center justify-between p-4 lg:px-16 lg:py-8 xl:px-32 2xl:px-48;
+  }
+
+  #footer {
+    @apply flex h-[var(--navbar-height)] items-center justify-between p-4 lg:px-16 lg:py-8 xl:px-32 2xl:px-48;
+  }
+
+  .btn {
+    @apply text-light bg-primary-light rounded-md px-4 py-2;
+  }
 }
