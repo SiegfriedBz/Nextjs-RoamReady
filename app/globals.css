@@ -41,8 +41,9 @@ body {
   }
 
   .page {
-    @apply flex min-h-[calc(100vh-var(--navbar-height)-2rem)] flex-col items-center
-    justify-between  
+    @apply flex min-h-[calc(100vh-var(--navbar-height)-2rem)] 
+    flex-col items-center
+    justify-center  
     lg:min-h-[calc(100vh-var(--navbar-height)-4rem)]  
     xl:min-h-[calc(100vh-var(--navbar-height)-8rem)]  
     2xl:min-h-[calc(100vh-var(--navbar-height)-12rem)];
@@ -61,8 +62,9 @@ body {
     @apply from-primary-dark via-primary to-primary-light text-light/70
     dark:text-light
       absolute 
-      left-0 right-0 
-      top-[var(--navbar-height)] z-[1000] flex 
+      left-0 right-0 top-[var(--navbar-height)] 
+      z-[1000] 
+      flex 
       h-[calc(100vh-var(--navbar-height))] 
       flex-col
       items-center
@@ -84,5 +86,36 @@ body {
 
   .btn {
     @apply text-light bg-primary-light border-primary rounded-md px-4 py-2;
+  }
+
+  /** links */
+  .nav-link {
+    @apply text-inherit;
+  }
+
+  .underline-gradient-link {
+    @apply hover:after:from-primary-dark
+      hover:after:to-primary-light
+      focus:after:from-primary-dark
+
+      focus:after:to-primary-light
+      active:after:from-primary-dark
+      active:after:to-primary-light
+
+      relative
+      transition-all
+      duration-300
+      
+      ease-in-out
+
+      after:absolute
+      after:bottom-[-0.1em] 
+      after:left-0 
+      after:h-[0.1em] 
+      after:w-0 after:transition-all  after:duration-500
+      after:ease-in-out
+      after:content-[""] hover:after:w-full  hover:after:bg-gradient-to-r
+      focus:after:w-full
+      focus:after:bg-gradient-to-r active:after:w-full  active:after:bg-gradient-to-r;
   }
 }

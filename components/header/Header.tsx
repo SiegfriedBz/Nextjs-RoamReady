@@ -15,10 +15,10 @@ const Header = () => {
       <Link
         href='/'
         onClick={() => setMobileMenuIsOpen(false)}
-        className='flex items-center gap-x-4'
+        className='flex items-center gap-x-2'
       >
         <Logo />
-        <h3 className='hidden sm:flex'>BrandName</h3>
+        <h3 className='hidden italic sm:flex'>RoamReady</h3>
       </Link>
 
       <div className='flex gap-x-4'>

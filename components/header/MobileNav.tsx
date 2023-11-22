@@ -1,14 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import ButtonMobileBurger from './ButtonMobileBurger'
-
-const MobileMenuLinks = [
-  { id: 1, title: 'Home', href: '/' },
-  { id: 2, title: 'Home', href: '/' },
-  { id: 3, title: 'About', href: '/about' },
-]
+import { MENU_LINKS } from '@/constants'
 
 type Props = {
   mobileMenuIsOpen: boolean
@@ -45,13 +41,22 @@ type MobileMenuProps = {
 }
 
 const MobileMenu = ({ setMobileMenuIsOpen }: MobileMenuProps) => {
+  const pathName = usePathname()
+  const isActivePath = (href: string) => pathName === href
+
   return (
-    <ul className='flex flex-col gap-y-8'>
-      {MobileMenuLinks.map((link) => {
+    <ul className='flex flex-col items-center gap-y-8'>
+      {MENU_LINKS.map((link) => {
         return (
           <li key={link.id}>
             <Link href={link.href} onClick={() => setMobileMenuIsOpen(false)}>
-              <h2> {link.title}</h2>
+              <h2
+                className={`nav-link text-4xl
+                    ${isActivePath(link.href) ? 'font-semibold' : ''}
+                `}
+              >
+                {link.title}
+              </h2>
             </Link>
           </li>
         )
