@@ -16,13 +16,12 @@ const config: Config = {
         // slate-900
         dark: '#1a202c',
         primary: {
-          // blue-600
-          // DEFAULT: '#3182ce',
-          DEFAULT: '#2C5AFF',
-          // blue-700
-          dark: '#2c5282',
-          //  blue-500
-          light: '#3b82f6',
+          // green-600
+          DEFAULT: '#16a34a',
+          // green-700
+          dark: '#15803d',
+          //  green-500
+          light: '#22c55e',
         },
         secondary: {
           //  amber-600
