@@ -7,12 +7,15 @@
 }
 
 body {
-  @apply bg-light text-primary-dark dark:text-light dark:bg-gradient-to-tr dark:from-slate-900 dark:to-slate-800;
+  @apply bg-light text-dark;
 }
 
 @layer base {
   h1 {
-    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+    @apply my-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+  h1.hero-title {
+    @apply text-3xl font-bold capitalize tracking-wide md:text-4xl lg:text-5xl xl:text-6xl;
   }
   h2 {
     @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl;
@@ -30,7 +33,7 @@ body {
     @apply text-xs md:text-sm lg:text-base xl:text-lg;
   }
   p {
-    @apply text-base md:text-lg lg:text-xl xl:text-2xl;
+    @apply text-base opacity-60 md:text-lg lg:text-xl xl:text-2xl;
   }
 }
 
@@ -41,26 +44,31 @@ body {
   }
 
   .page {
-    @apply flex min-h-[calc(100vh-var(--navbar-height)-2rem)] 
-    flex-col items-center
-    justify-center  
+    @apply min-h-[calc(100vh-var(--navbar-height)-2rem)]  
     lg:min-h-[calc(100vh-var(--navbar-height)-4rem)]  
     xl:min-h-[calc(100vh-var(--navbar-height)-8rem)]  
     2xl:min-h-[calc(100vh-var(--navbar-height)-12rem)];
   }
 
+  .section-full-page {
+    @apply min-h-[calc(100vh-var(--navbar-height)-1rem)]  
+    lg:min-h-[calc(100vh-var(--navbar-height)-2rem)]  
+    xl:min-h-[calc(100vh-var(--navbar-height)-4rem)]  
+    2xl:min-h-[calc(100vh-var(--navbar-height)-6rem)];
+  }
+
   #header {
-    @apply dark:border-primary-light border-primary
-      flex 
-      h-[var(--navbar-height)] items-center 
-      justify-between border-b p-4 lg:px-16
+    @apply border-primary
+      flex
+      h-[var(--navbar-height)] 
+      items-center justify-between 
+      border-b p-4 lg:px-16
       lg:py-8 xl:px-32 2xl:px-48;
   }
 
   /** MobileMenu */
   .mobile-menu {
     @apply from-primary-dark via-primary to-primary-light text-light/70
-    dark:text-light
       absolute 
       left-0 right-0 top-[var(--navbar-height)] 
       z-[1000] 
@@ -69,23 +77,31 @@ body {
       flex-col
       items-center
       justify-center
-      bg-gradient-to-r 
-      dark:bg-gradient-to-r 
-    dark:from-slate-900
-    dark:to-slate-800;
+      bg-gradient-to-r;
   }
 
   #footer {
-    @apply dark:border-primary-light
-      flex
+    @apply flex
       h-[var(--navbar-height)]
       items-center 
       justify-between border-t
-      p-4 lg:px-16 lg:py-8 xl:px-32 2xl:px-48;
+      p-4
+       lg:px-16 lg:py-8 xl:px-32 2xl:px-48;
   }
 }
 
 @layer utilities {
+  /** hero */
+  .hero-bg {
+    @apply bg-hero-pattern-bg absolute -left-24 bottom-0 
+    right-0 top-0 
+    rounded-md bg-cover
+    bg-center 
+    lg:-left-16
+    xl:left-32
+    2xl:left-48;
+  }
+
   /** buttons */
   .btn-gradient-green {
     @apply text-light
@@ -98,7 +114,6 @@ body {
 
   .btn-outline-green {
     @apply ring-primary-dark 
-      dark:hover:ring-primary-light
       hover:shadow-primary-dark 
       hover:text-light
       hover:from-primary-dark
@@ -130,10 +145,15 @@ body {
       after:bottom-[-0.1em] 
       after:left-0 
       after:h-[0.1em] 
-      after:w-0 after:transition-all  after:duration-500
+      after:w-0 
+      after:transition-all after:duration-500
       after:ease-in-out
-      after:content-[""] hover:after:w-full  hover:after:bg-gradient-to-r
+      after:content-[""] 
+      hover:after:w-full  
+      hover:after:bg-gradient-to-r
       focus:after:w-full
-      focus:after:bg-gradient-to-r active:after:w-full  active:after:bg-gradient-to-r;
+      focus:after:bg-gradient-to-r 
+      active:after:w-full
+      active:after:bg-gradient-to-r;
   }
 }
