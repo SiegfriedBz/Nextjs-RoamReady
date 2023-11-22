@@ -1,6 +1,7 @@
 import Logo from './Logo'
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
+import ButtonToggleTheme from './ButtonToggleTheme'
 
 const Header = () => {
   return (
@@ -10,14 +11,17 @@ const Header = () => {
         BrandName
       </div>
 
-      {/* desktop nav */}
-      <div>
-        <DesktopNav />
-      </div>
+      <div className='flex gap-x-4'>
+        <ButtonToggleTheme />
 
-      {/* mobile nav */}
-      <div>
-        <MobileNav />
+        {/* desktop nav */}
+        <div className='hidden md:flex'>
+          <DesktopNav />
+        </div>
+        {/* mobile nav */}
+        <div className='flex md:hidden'>
+          <MobileNav />
+        </div>
       </div>
     </div>
   )
