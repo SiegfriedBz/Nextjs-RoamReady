@@ -50,6 +50,10 @@ body {
     2xl:min-h-[calc(100vh-var(--navbar-height)-12rem)];
   }
 
+  .section-top {
+    @apply mt-[calc(var(--navbar-height))];
+  }
+
   .section-full-page {
     @apply min-h-[calc(100vh-var(--navbar-height)-1rem)]  
     lg:min-h-[calc(100vh-var(--navbar-height)-2rem)]  
@@ -58,12 +62,13 @@ body {
   }
 
   #header {
-    @apply border-primary
-      flex
-      h-[var(--navbar-height)] 
-      items-center justify-between 
-      border-b p-4 lg:px-16
-      lg:py-8 xl:px-32 2xl:px-48;
+    @apply border-primary bg-light fixed left-0 right-0
+      top-0 z-[9999]
+      flex 
+      h-[var(--navbar-height)] items-center 
+      justify-between border-b p-4
+      opacity-100 lg:px-16 lg:py-8
+      xl:px-32 2xl:px-48;
   }
 
   /** MobileMenu */
@@ -91,40 +96,13 @@ body {
 }
 
 @layer utilities {
-  /** hero */
-  .hero-bg {
-    @apply bg-hero-pattern-bg absolute -left-24 bottom-0 
-    right-0 top-0 
-    rounded-md bg-cover
-    bg-center 
-    lg:-left-16
-    xl:left-32
-    2xl:left-48;
-  }
-
-  /** buttons */
-  .btn-gradient-green {
-    @apply text-light
-      from-primary-dark 
-      shadow-primary-dark
-      to-primary-light
-        bg-gradient-to-r
-        hover:scale-110;
-  }
-
-  .btn-outline-green {
-    @apply ring-primary-dark 
-      hover:shadow-primary-dark 
-      hover:text-light
-      hover:from-primary-dark
-      hover:to-primary-light 
-        ring-1
-        hover:bg-gradient-to-r;
-  }
-
-  /** links */
+  /** text colors */
+  .text-gradient,
   .nav-link {
-    @apply text-inherit;
+    @apply from-primary-dark to-primary-light bg-gradient-to-r bg-clip-text text-transparent;
+  }
+  .nav-link-mobile {
+    @apply from-light/50 to-light bg-gradient-to-r bg-clip-text text-transparent;
   }
 
   .underline-gradient-link {
@@ -155,5 +133,45 @@ body {
       focus:after:bg-gradient-to-r 
       active:after:w-full
       active:after:bg-gradient-to-r;
+  }
+
+  /** buttons */
+  .btn-gradient-green {
+    @apply text-light
+      from-primary-dark 
+      shadow-primary-dark
+      to-primary-light
+        hover:shadow-secondary-light
+        ring-primary-light
+        bg-gradient-to-r
+        hover:scale-105
+        hover:shadow-sm;
+  }
+
+  .btn-outline-green {
+    @apply ring-primary-dark 
+      hover:shadow-primary-dark 
+      hover:text-light
+      hover:from-primary-dark
+      hover:to-primary-light 
+        ring-1
+        hover:bg-gradient-to-r;
+  }
+
+  /** hero */
+  .hero-bg {
+    @apply bg-hero-pattern-bg
+    absolute 
+    -left-12
+    bottom-0 
+    right-0 
+    top-60
+    rounded-md
+    bg-cover bg-center
+    lg:-left-16 
+    lg:bottom-32
+    lg:top-0
+    xl:left-32
+    2xl:left-60;
   }
 }
