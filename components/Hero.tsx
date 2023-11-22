@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import CustomButton from '@/components/buttons/CustomButton'
 import Stars from './Stars'
 import HeroBtnWrapper from './HeroBtnWrapper'
 
