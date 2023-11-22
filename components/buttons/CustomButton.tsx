@@ -20,13 +20,11 @@ const CustomButton = ({
       type={btnType}
       onClick={onClick}
       className={twMerge(
-        `
-          rounded-md
-          px-4 py-2
+        ` rounded-xl
+          px-8 py-4
           font-semibold uppercase
           tracking-wide shadow-sm
           transition-all duration-300 ease-in-out
-          hover:opacity-90
          `,
         variant,
         className

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div id='header'>
       <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
-        <h3 className='italic'>RoamReady</h3>
+        <h2 className='text-gradient font-semibold italic'>RoamReady</h2>
       </Link>
 
       {/* desktop nav */}

@@ -51,7 +51,7 @@ const MobileMenu = ({ setMobileMenuIsOpen }: MobileMenuProps) => {
           <li key={link.id}>
             <Link href={link.href} onClick={() => setMobileMenuIsOpen(false)}>
               <h2
-                className={`nav-link text-4xl
+                className={`nav-link-mobile text-4xl
                     ${isActivePath(link.href) ? 'font-semibold' : ''}
                 `}
               >
