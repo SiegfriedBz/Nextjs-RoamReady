@@ -62,27 +62,31 @@ body {
   }
 
   #header {
-    @apply border-primary bg-light fixed left-0 right-0
-      top-0 z-[9999]
-      flex 
-      h-[var(--navbar-height)] items-center 
-      justify-between border-b p-4
+    @apply fixed 
+    left-0 
+      right-0 top-0 z-[9999] flex 
+      h-[var(--navbar-height)]
+      items-center 
+      justify-between 
+      border-b border-primary
+      bg-light 
+      p-4
       opacity-100 lg:px-16 lg:py-8
       xl:px-32 2xl:px-48;
   }
 
   /** MobileMenu */
   .mobile-menu {
-    @apply from-primary-dark via-primary to-primary-light text-light/70
-      absolute 
-      left-0 right-0 top-[var(--navbar-height)] 
+    @apply absolute left-0 right-0 top-[var(--navbar-height)]
       z-[1000] 
-      flex 
-      h-[calc(100dvh-var(--navbar-height))] 
-      flex-col
-      items-center
-      justify-center
-      bg-gradient-to-r;
+      flex h-[calc(100dvh-var(--navbar-height))] flex-col 
+      items-center 
+      justify-center 
+      bg-gradient-to-r 
+      from-primary-dark
+      via-primary
+      to-primary-light
+      text-light/70;
   }
 
   #footer {
@@ -90,8 +94,9 @@ body {
       h-[var(--navbar-height)]
       items-center 
       justify-between border-t
+      border-primary 
       p-4
-       lg:px-16 lg:py-8 xl:px-32 2xl:px-48;
+      lg:px-16 lg:py-8 xl:px-32 2xl:px-48;
   }
 }
 
@@ -99,79 +104,111 @@ body {
   /** text colors */
   .text-gradient,
   .nav-link {
-    @apply from-primary-dark to-primary-light bg-gradient-to-r bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-dark to-primary-light bg-clip-text text-transparent;
   }
   .nav-link-mobile {
-    @apply from-light/50 to-light bg-gradient-to-r bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-light/50 to-light bg-clip-text text-transparent;
   }
 
   .underline-gradient-link {
-    @apply hover:after:from-primary-dark
-      hover:after:to-primary-light
-      focus:after:from-primary-dark
-
-      focus:after:to-primary-light
-      active:after:from-primary-dark
-      active:after:to-primary-light
-
-      relative
+    @apply relative
       transition-all
       duration-300
-      ease-in-out
 
+      ease-in-out
       after:absolute
-      after:bottom-[-0.1em] 
-      after:left-0 
-      after:h-[0.1em] 
-      after:w-0 
-      after:transition-all after:duration-500
-      after:ease-in-out
+      after:bottom-[-0.1em]
+
+      after:left-0
+      after:h-[0.1em]
+      after:w-0
+      after:transition-all
+
+      after:duration-500
+      after:ease-in-out 
       after:content-[""] 
-      hover:after:w-full  
-      hover:after:bg-gradient-to-r
+      hover:after:w-full 
+      hover:after:bg-gradient-to-r 
+      hover:after:from-primary-dark hover:after:to-primary-light
       focus:after:w-full
       focus:after:bg-gradient-to-r 
+      focus:after:from-primary-dark  
+      focus:after:to-primary-light
       active:after:w-full
-      active:after:bg-gradient-to-r;
+      active:after:bg-gradient-to-r 
+      active:after:from-primary-dark
+      active:after:to-primary-light;
   }
 
   /** buttons */
   .btn-gradient-green {
-    @apply text-light
+    @apply bg-gradient-to-r
       from-primary-dark 
-      shadow-primary-dark
       to-primary-light
-        hover:shadow-secondary-light
+      text-light
+        shadow-primary-dark
         ring-primary-light
-        bg-gradient-to-r
         hover:scale-105
-        hover:shadow-sm;
+        hover:shadow-sm
+        hover:shadow-secondary-light;
   }
 
   .btn-outline-green {
-    @apply ring-primary-dark 
-      hover:shadow-primary-dark 
-      hover:text-light
+    @apply ring-1 
+      ring-primary-dark 
+      hover:bg-gradient-to-r
       hover:from-primary-dark
       hover:to-primary-light 
-        ring-1
-        hover:bg-gradient-to-r;
+        hover:text-light
+        hover:shadow-primary-dark;
   }
 
-  /** hero */
+  /** hero bg  */
   .hero-bg {
-    @apply bg-hero-pattern-bg
-    absolute 
-    bottom-0
-    left-8 
+    @apply absolute
+    bottom-0 
+    left-8
     right-0 
-    top-60
-    rounded-md
+    top-60 
+    bg-hero-map-bg
     bg-cover bg-center
     sm:bottom-24
     lg:bottom-32
     lg:left-[32rem]
-
     lg:top-0;
+  }
+
+  /** camp bg  */
+  .camp-images-wrapper {
+    @apply relative flex h-[50vh] overflow-x-auto sm:h-[58vh] md:h-[64vh] lg:h-[76vh];
+  }
+  .camp-bg {
+    @apply absolute bottom-0
+    top-0
+    h-full
+    w-[calc(100vw-2rem)] 
+    bg-cover
+    bg-center
+    bg-no-repeat
+    lg:w-[48.5vw]
+    xl:w-[42.5vw]
+    2xl:w-[37.5vw];
+  }
+  .camp-1-bg {
+    @apply left-0
+    right-0 
+    bg-camp-1-bg
+    lg:right-[48.5vw]
+    xl:right-[42.5vw]
+    2xl:right-[37.5vw];
+  }
+  .camp-2-bg {
+    @apply left-[101vw]
+    right-[201vw]
+    bg-camp-2-bg
+    lg:left-[50.5vw]
+    lg:right-0
+    xl:left-[44.5vw] 
+    2xl:left-[39.5vw];
   }
 }

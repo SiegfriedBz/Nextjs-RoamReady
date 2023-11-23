@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Stars from './Stars'
-import CustomButtonWrapper from './CustomButtonWrapper'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleRight, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
+import CustomButtonWrapper from './buttons/CustomButtonWrapper'
 
 const Hero = () => {
   return (
-    <section className='section-top section-full-page relative rounded-lg'>
+    <section className='section-top section-full-page relative'>
+      {/* her bg img */}
       <div className='hero-bg z-[-20]' />
 
       {/* desktop left */}
@@ -54,7 +55,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/*  */}
+      {/* location */}
       <div
         className='ring-primary-light
         absolute 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import CustomButton from './buttons/CustomButton'
+import CustomButton from './CustomButton'
 
 type Props = {
   variant?: string
