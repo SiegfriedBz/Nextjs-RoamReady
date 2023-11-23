@@ -4,7 +4,7 @@ type Props = {
   btnType?: 'button' | 'submit' | 'reset'
   variant?: string
   className?: string
-  onClick?: () => void
+  handleClick?: () => void
   children: React.ReactNode
 }
 
@@ -12,13 +12,13 @@ const CustomButton = ({
   btnType = 'button',
   variant = 'btn-gradient-green',
   className = '',
-  onClick,
+  handleClick,
   children,
 }: Props) => {
   return (
     <button
       type={btnType}
-      onClick={onClick}
+      onClick={handleClick}
       className={twMerge(
         ` rounded-xl
           px-8 py-4
