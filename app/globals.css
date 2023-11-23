@@ -162,16 +162,16 @@ body {
   .hero-bg {
     @apply bg-hero-pattern-bg
     absolute 
-    -left-12
-    bottom-0 
+    bottom-0
+    left-8 
     right-0 
     top-60
     rounded-md
     bg-cover bg-center
-    lg:-left-16 
+    sm:bottom-24
     lg:bottom-32
-    lg:top-0
-    xl:left-32
-    2xl:left-60;
+    lg:left-[32rem]
+
+    lg:top-0;
   }
 }
