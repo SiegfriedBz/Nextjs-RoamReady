@@ -21,6 +21,8 @@ const config: Config = {
           DEFAULT: '#16a34a',
           // green-700
           dark: '#15803d',
+          // green-900
+          'super-dark': '#14532d',
           //  green-500
           light: '#22c55e',
         },
