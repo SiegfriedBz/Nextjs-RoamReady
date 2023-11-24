@@ -33,7 +33,7 @@ const Guide = () => {
       </div>
 
       {/* bottom - img */}
-      <div className='guide-bg h-full w-full'>
+      <div className='guide-boat-bg h-full w-full'>
         {/* bg img content */}
         <div className='relative h-full w-full'>
           <div

@@ -88,7 +88,7 @@ body {
 
   .footer {
     @apply flex
-      h-[var(--navbar-height)]
+      min-h-[var(--navbar-height)]
       items-center 
       border-t
       border-primary;
@@ -239,14 +239,14 @@ body {
   }
 
   /** guide bg  */
-  .guide-bg {
-    @apply absolute 
+  .guide-boat-bg {
+    @apply bg-guide-boat-bg 
+    absolute 
     bottom-2 
     left-0 
-    right-0 
-    h-[38vh]
+    right-0
     
-    bg-guide-bg
+    h-[38vh]
     bg-cover 
     bg-center 
     bg-no-repeat 
