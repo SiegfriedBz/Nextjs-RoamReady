@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import React from 'react'
 
 const Guide = () => {
   return (
-    <section className='section-full-page relative flex flex-col'>
+    <section className='min-h-section-full-page relative flex flex-col'>
       {/* top */}
-      <div className='flex h-1/2 w-full flex-col gap-y-1 lg:flex-row lg:items-center'>
+      <div className='padding-container-x flex h-1/2 w-full flex-col gap-y-1 lg:flex-row lg:items-center'>
         {/*  */}
         <div className='lg:w-2/3'>
           <Image

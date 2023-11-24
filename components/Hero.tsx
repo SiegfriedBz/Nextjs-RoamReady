@@ -7,7 +7,7 @@ import CustomButtonWrapper from './buttons/CustomButtonWrapper'
 
 const Hero = () => {
   return (
-    <section className='section-top section-full-page relative'>
+    <section className='mt-section-top min-h-section-full-page padding-container relative'>
       {/* hero bg img */}
       <div className='hero-bg z-[-20]' />
 
@@ -59,7 +59,7 @@ const Hero = () => {
       <div
         className='absolute
         -bottom-2 
-        left-0 my-8 
+        left-4 my-8 
         w-fit
         flex-1 
         rounded-3xl 
