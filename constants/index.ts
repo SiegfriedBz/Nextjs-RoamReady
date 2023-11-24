@@ -1,3 +1,15 @@
+import {
+  faMapLocationDot,
+  faCalendarDays,
+  faLightbulb,
+  faLocationDot,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faYoutube,
+  faLinkedin,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons'
+
 // NAVBAR SECTION
 export const MENU_LINKS = [
   { id: 1, title: 'Home', href: '/' },
@@ -14,13 +26,6 @@ export const PERSONS_IMG = [
   { id: 3, img: '/person-3.png', z: 'z-10', left: 'left-12' },
   { id: 4, img: '/person-4.png', z: 'z-20', left: 'left-[4.5rem]' },
 ]
-
-import {
-  faMapLocationDot,
-  faCalendarDays,
-  faLightbulb,
-  faLocationDot,
-} from '@fortawesome/free-solid-svg-icons'
 
 // FEATURES SECTION
 export const FEATURES = [
@@ -59,35 +64,50 @@ export const FOOTER_LINKS = [
   {
     title: 'Learn More',
     links: [
-      'About RoamReady',
-      'Press Releases',
-      'Environment',
-      'Jobs',
-      'Privacy Policy',
-      'Contact Us',
+      { title: 'About RoamReady', href: '/' },
+      { title: 'Press Releases', href: '/' },
+      { title: 'Environment', href: '/' },
+      { title: 'Jobs', href: '/' },
+      { title: 'Privacy Policy', href: '/' },
+      { title: 'Contact Us', href: '/' },
     ],
   },
   {
     title: 'Our Community',
-    links: ['Climbing xixixi', 'Hiking hilink', 'Hilink kinthill'],
+    links: [
+      { title: 'Hiking Machu Picchu', href: '/' },
+      { title: 'Climbing K2', href: '/' },
+      { title: 'Climbing Annapurna', href: '/' },
+    ],
   },
 ]
 
-export const FOOTER_CONTACT_INFO = {
-  title: 'Contact Us',
-  links: [
-    { label: 'Admin Officer', value: '123-456-7890' },
-    { label: 'Email Officer', value: 'hilink@akinthil.com' },
-  ],
-}
+export const FOOTER_CONTACT_INFO = [
+  {
+    title: 'Contact Us',
+    links: [
+      { title: 'Admin Officer', value: '123-456-7890' },
+      { title: 'Email', value: 'roamready@roamready.com' },
+    ],
+  },
+]
 
-export const SOCIALS = {
-  title: 'Social',
-  links: [
-    '/facebook.svg',
-    '/instagram.svg',
-    '/twitter.svg',
-    '/youtube.svg',
-    '/wordpress.svg',
-  ],
-}
+export const FOOTER_SOCIAL_LINKS = [
+  {
+    title: 'Social',
+    links: [
+      {
+        href: '/',
+        icon: faYoutube,
+      },
+      {
+        href: '/',
+        icon: faInstagram,
+      },
+      {
+        href: '/',
+        icon: faLinkedin,
+      },
+    ],
+  },
+]
