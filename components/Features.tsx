@@ -1,14 +1,17 @@
-import { FontAwesomeIcon, IconProp } from '@fortawesome/react-fontawesome'
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import { FEATURES } from '@/constants'
 
 const Features = () => {
   return (
     <section
-      className='section-full-page bg-feature-bg
-      flex
+      className='section-full-page flex
       flex-col
-      rounded-lg bg-cover bg-center bg-no-repeat'
+      rounded-lg
+      bg-feature-bg bg-cover bg-center bg-no-repeat'
     >
       {/* title */}
       <div className='flex flex-col sm:gap-y-4 lg:w-1/2'>
@@ -60,7 +63,7 @@ export default Features
 
 type FeatureItemProps = {
   title: string
-  icon: typeof IconProp
+  icon: FontAwesomeIconProps['icon']
   iconColor: string
   description: string
 }
