@@ -54,7 +54,7 @@ body {
   }
 
   .min-h-section-full-page {
-    @apply min-h-[calc(100dvh-var(--navbar-height))];
+    @apply min-h-[calc(100vh-var(--navbar-height))];
   }
 
   .bg-section-accent {
@@ -76,7 +76,7 @@ body {
   .mobile-menu {
     @apply absolute left-0 right-0 top-[var(--navbar-height)]
       z-[1000] 
-      flex h-[calc(100dvh-var(--navbar-height))] flex-col 
+      flex h-[calc(100vh-var(--navbar-height))] flex-col 
       items-center 
       justify-center 
       bg-gradient-to-r 
