@@ -53,6 +53,10 @@ body {
     @apply mt-[calc(var(--navbar-height))];
   }
 
+  .min-h-section-top {
+    @apply min-h-[calc(100dvh-var(--navbar-height))];
+  }
+
   .min-h-section-full-page {
     @apply min-h-[calc(100vh-var(--navbar-height))];
   }
