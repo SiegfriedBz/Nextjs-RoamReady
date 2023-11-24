@@ -8,7 +8,7 @@ import CustomButtonWrapper from './buttons/CustomButtonWrapper'
 const Hero = () => {
   return (
     <section className='section-top section-full-page relative'>
-      {/* her bg img */}
+      {/* hero bg img */}
       <div className='hero-bg z-[-20]' />
 
       {/* desktop left */}
@@ -17,10 +17,10 @@ const Hero = () => {
           src='/camp.svg'
           width={50}
           height={50}
-          className='h-12 w-12 lg:h-20 lg:w-20'
+          className='h-12 w-12 lg:h-14 lg:w-14'
           alt='camp'
         />
-        <h1 className='hero-title'>shaman mixtape ascot unicorn camp</h1>
+        <h1 className='title'>shaman mixtape ascot unicorn camp</h1>
         <p className='text-justify'>
           I&apos;m baby taxidermy authentic normcore health post-ironic street
           art big mood meditation. Raw shaman ramps biodiesel, live-edge
@@ -47,7 +47,7 @@ const Hero = () => {
           <CustomButtonWrapper
             route='/#get-app'
             variant='btn-outline-green'
-            className='text-primary-dark my-4 flex w-1/2 items-center justify-center gap-x-1 whitespace-nowrap px-4 py-2 normal-case lg:w-1/3'
+            className='mb-4 mt-2 flex w-1/2 items-center justify-center gap-x-1 whitespace-nowrap px-4 py-2 normal-case text-primary-dark lg:w-1/3'
           >
             <FontAwesomeIcon icon={faCircleRight} className='h-5 w-5' />
             How we work ?
@@ -57,14 +57,14 @@ const Hero = () => {
 
       {/* location */}
       <div
-        className='ring-primary-light
-        absolute 
-        -bottom-6 left-0 
-        my-8
-        w-fit 
+        className='absolute
+        -bottom-2 
+        left-0 my-8 
+        w-fit
         flex-1 
         rounded-3xl 
-        ring-1 sm:bottom-32 lg:bottom-auto
+        ring-1 
+        ring-primary-light sm:bottom-32 lg:bottom-auto
         lg:left-1/2 
         lg:top-1/4 
         lg:-translate-y-16 
@@ -72,28 +72,27 @@ const Hero = () => {
       >
         <div
           className='
-          from-primary-super-dark
+          relative
+          flex 
+          w-full 
+          flex-col 
+          items-start justify-start gap-y-2 rounded-3xl
+          bg-gradient-to-r from-primary-super-dark
           to-primary-dark 
-          text-light 
-          relative 
-          flex w-full flex-col items-start
-          justify-start gap-y-2
-          rounded-3xl 
-          bg-gradient-to-r 
-          px-8 py-4 lg:gap-y-4'
+          px-8 
+          py-4 text-light lg:gap-y-4'
         >
           <div className='flex w-full flex-col'>
-            <div className='flex w-full justify-between'>
-              <h6 className='opacity-50'>Location</h6>
-              <button type='button'>
-                <FontAwesomeIcon
-                  icon={faCircleXmark}
-                  className='text-primary-light bg-light h-5 w-5 rounded-full opacity-90'
-                />
-              </button>
-            </div>
+            <h6 className='opacity-50'>Location</h6>
             <h5>Bear Cove</h5>
           </div>
+          {/* fake close btn */}
+          <button type='button' className='absolute right-3 top-3'>
+            <FontAwesomeIcon
+              icon={faCircleXmark}
+              className='h-5 w-5 rounded-full bg-light text-primary-light opacity-90'
+            />
+          </button>
           <div className='flex w-full gap-x-8'>
             <div className='flex flex-col'>
               <h6 className='opacity-50'>Distance</h6>

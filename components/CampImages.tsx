@@ -8,8 +8,7 @@ import {
   faCircleLeft,
   faCircleRight,
 } from '@fortawesome/free-solid-svg-icons'
-
-import CustomButton from './buttons/CustomButton'
+import { PERSONS_IMG } from '@/constants'
 
 const CampImages = () => {
   const leftImg = useRef<HTMLDivElement>(null)
@@ -105,18 +104,22 @@ const CampImage = forwardRef(
           {/* bottom */}
           <div className='absolute bottom-4 left-0 flex w-full items-center sm:w-2/3'>
             <div className='relative h-8 w-1/3 -translate-y-1/2 rounded-full'>
-              <div className=' z-5 absolute left-0 flex h-16 w-16 items-center justify-center'>
-                <Image src='/person-1.png' width={36} height={36} alt='' />
-              </div>
-              <div className='absolute left-6 z-10 flex h-16 w-16 items-center justify-center'>
-                <Image src='/person-2.png' width={36} height={36} alt='' />
-              </div>
-              <div className='absolute left-12 z-20 flex h-16 w-16 items-center justify-center'>
-                <Image src='/person-3.png' width={36} height={36} alt='' />
-              </div>
-              <div className='absolute left-[4.5rem] z-30 flex h-16 w-16 items-center justify-center'>
-                <Image src='/person-4.png' width={36} height={36} alt='' />
-              </div>
+              {/* persons */}
+              {PERSONS_IMG.map((person) => {
+                return (
+                  <div
+                    key={person.id}
+                    className={`${person.z} absolute ${person.left} flex h-16 w-16 items-center justify-center`}
+                  >
+                    <Image
+                      src={person.img}
+                      width={36}
+                      height={36}
+                      alt='avatar'
+                    />
+                  </div>
+                )
+              })}
             </div>
             <div>
               <h4 className='ms-4 font-extrabold capitalize tracking-wide text-light opacity-80 lg:ms-8'>
@@ -132,7 +135,7 @@ const CampImage = forwardRef(
           onClick={scrollTo}
           className='absolute bottom-4 right-4 z-[999] flex w-fit items-center justify-center rounded-full bg-gradient-to-r from-primary-dark to-primary-light p-2 2xl:hidden'
         >
-          <FontAwesomeIcon icon={arrowIcon} className='h-4 w-4 text-light' />
+          <FontAwesomeIcon icon={arrowIcon} className='h-5 w-5 text-light' />
         </button>
       </div>
     )

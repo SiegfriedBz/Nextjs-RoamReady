@@ -12,6 +12,8 @@ const config: Config = {
         'hero-map-bg': "url('/hero-map-bg.png')",
         'camp-1-bg': "url('/camp-1-bg.png')",
         'camp-2-bg': "url('/camp-2-bg.png')",
+        'guide-bg': "url('/boat.png')",
+        'feature-bg': "url('/feature-bg.png')",
       },
       screens: {
         xs: '480px',
