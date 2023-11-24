@@ -14,8 +14,8 @@ body {
   h1 {
     @apply my-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
   }
-  h1.hero-title {
-    @apply text-3xl font-bold capitalize tracking-wide md:text-4xl lg:text-5xl xl:text-6xl;
+  h1.title {
+    @apply text-3xl font-bold capitalize tracking-wide opacity-90 md:text-4xl lg:text-5xl xl:text-6xl;
   }
   h2 {
     @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl;
@@ -33,7 +33,7 @@ body {
     @apply text-xs md:text-sm lg:text-base xl:text-lg;
   }
   p {
-    @apply text-base opacity-60 md:text-lg lg:text-xl xl:text-2xl;
+    @apply text-base opacity-60 md:text-lg lg:text-xl;
   }
 }
 
@@ -55,10 +55,7 @@ body {
   }
 
   .section-full-page {
-    @apply min-h-[calc(100dvh-var(--navbar-height)-1rem)]  
-    lg:min-h-[calc(100dvh-var(--navbar-height)-2rem)]  
-    xl:min-h-[calc(100dvh-var(--navbar-height)-4rem)]  
-    2xl:min-h-[calc(100dvh-var(--navbar-height)-6rem)];
+    @apply min-h-[calc(100dvh-var(--navbar-height))];
   }
 
   #header {
@@ -180,7 +177,7 @@ body {
 
   /** camp bg  */
   .camp-images-wrapper {
-    @apply relative flex h-[50vh] overflow-x-auto sm:h-[58vh] md:h-[64vh] lg:h-[76vh];
+    @apply relative flex h-[52vh] overflow-x-auto sm:h-[58vh] md:h-[64vh] lg:h-[76vh];
   }
   .camp-bg {
     @apply absolute bottom-0
@@ -210,5 +207,21 @@ body {
     lg:right-0
     xl:left-[44.5vw] 
     2xl:left-[39.5vw];
+  }
+
+  /** guide bg  */
+  .guide-bg {
+    @apply bg-guide-bg 
+    xs:h-[56vh] 
+    absolute 
+    bottom-2 left-0 right-0 
+    h-[38vh]
+    rounded-3xl 
+    bg-cover 
+    bg-center 
+    bg-no-repeat 
+    sm:h-[54vh] 
+    lg:h-[56vh]
+    xl:h-[54vh];
   }
 }

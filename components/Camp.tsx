@@ -22,21 +22,20 @@ const PopUp = () => {
         xs:right-1/3 xs:bottom-12
 
         absolute
-        bottom-1
+        bottom-8
         left-0
 
         w-fit flex-1 
         rounded-3xl ring-1
       ring-primary-light
 
-
-        sm:bottom-0
-        sm:right-1/4
-        lg:bottom-32
+      sm:right-1/4
+        md:bottom-2
+        lg:bottom-44
         lg:left-1/2
         lg:right-12
         lg:-translate-x-1/4
-        xl:bottom-24
+        xl:bottom-44
         '
       >
         <div
