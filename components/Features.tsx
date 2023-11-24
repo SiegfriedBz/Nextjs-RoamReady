@@ -8,10 +8,10 @@ import { FEATURES } from '@/constants'
 const Features = () => {
   return (
     <section
-      className='section-full-page flex
+      className='min-h-section-full-page padding-container flex
       flex-col
       rounded-lg
-      bg-feature-bg bg-cover bg-center bg-no-repeat'
+      bg-feature-bg bg-cover bg-center bg-no-repeat py-4'
     >
       {/* title */}
       <div className='flex flex-col sm:gap-y-4 lg:w-1/2'>
@@ -29,7 +29,7 @@ const Features = () => {
         {/* left img */}
         <div className='relative hidden flex-1 lg:flex '>
           <Image
-            src='/phone.png'
+            src='/features-phone.png'
             alt='feature'
             width={285}
             height={285}
@@ -37,13 +37,13 @@ const Features = () => {
           />
         </div>
 
-        {/* features container */}
+        {/* features padding-container */}
         <div
           className='
           grid 
           gap-y-2 
           sm:gap-y-4
-          md:w-[67%] 
+          md:w-[58%] 
           md:gap-x-4
           md:gap-y-8
           lg:grid-cols-2

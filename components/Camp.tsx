@@ -2,7 +2,7 @@ import CampImages from './CampImages'
 
 const Camp = () => {
   return (
-    <section className='section-full-page relative'>
+    <section className='min-h-section-full-page padding-container relative'>
       {/* bg imgs */}
       <CampImages />
 
@@ -19,18 +19,25 @@ const PopUp = () => {
     <>
       <div
         className='
-        xs:right-1/3 xs:bottom-12
+        absolute 
+        bottom-4
+        left-4
+        right-4
 
-        absolute
-        bottom-8
-        left-0
+        w-fit
 
-        w-fit flex-1 
-        rounded-3xl ring-1
-      ring-primary-light
+        rounded-3xl 
+        ring-1 
+        ring-primary-light 
+        
+        xs:bottom-16
+        xs:right-1/4
 
-      sm:right-1/4
-        md:bottom-2
+        sm:bottom-12
+
+        md:bottom-4
+        md:right-4
+
         lg:bottom-44
         lg:left-1/2
         lg:right-12
