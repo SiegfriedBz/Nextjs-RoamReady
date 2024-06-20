@@ -1,6 +1,6 @@
 # Travel App Landing Page
 
-Next.js 14 application created to learn Tailwind CSS. This project consists of a single landing page.
+Next.js 14 application created to learn Tailwind CSS, responsive design, and to practice TypeScript. This project consists of a single landing page.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -46,9 +46,9 @@ npm start
 # Technologies Used
 
 - **Framework**: React, Next.js 14
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS, responsive design
 - TypeScript: Used throughout the project for type safety and enhanced developer experience.
 
 
 ## Live Demo
-Visit the live demo of [Travel App Landing Pagee](https://travel-landing-seven.vercel.app/) deployed on Vercel.
+Visit the live demo of [Travel App Landing Page](https://travel-landing-seven.vercel.app/) deployed on Vercel.
