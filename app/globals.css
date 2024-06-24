@@ -54,7 +54,7 @@ body {
   }
 
   .min-h-section-top {
-    @apply min-h-[calc(100dvh-var(--navbar-height))];
+    @apply min-h-[calc(100svh-var(--navbar-height))];
   }
 
   .min-h-section-full-page {
@@ -244,13 +244,13 @@ body {
 
   /** guide bg  */
   .guide-boat-bg {
-    @apply bg-guide-boat-bg 
-    absolute 
+    @apply absolute 
     bottom-2 
     left-0 
-    right-0
-    
+    right-0 
     h-[38vh]
+    
+    bg-guide-boat-bg
     bg-cover 
     bg-center 
     bg-no-repeat 
