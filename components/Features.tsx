@@ -8,7 +8,8 @@ import { FEATURES } from '@/constants'
 const Features = () => {
   return (
     <section
-      className='min-h-section-full-page padding-container flex
+      id='features'
+      className='min-h-section-full-page padding-container flex scroll-mt-8
       flex-col
       rounded-lg
       bg-feature-bg bg-cover bg-center bg-no-repeat py-4'
